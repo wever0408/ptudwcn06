@@ -1,0 +1,51 @@
+<div class="register">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+
+                <form action="" method="post">
+                    <h1>{{title}}</h1>
+                    <div class="form-group">
+                        <label>Họ tên</label>
+                        <input type="text" name="fullname">
+                    </div>
+                    <div class="form-group">
+                        <label>Địa chỉ email</label>
+                        <input type="email" name="email" id="email" >
+                        <div class="ui-state-error" id="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu</label>
+                        <input type="password" name="password" >
+                    </div>
+                    <div class="form-group">
+                        <label>Số điện thoại</label>
+                        <input type="text" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label>Địa chỉ</label>
+                        <input type="text" name="address" >
+                    </div>
+                    <button type="submit" id="register" class="btn btn-primary">Đăng ký</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- {{#extend "scripts"}}
+    <script>
+        $('#email').keyup(function() {
+            $.getJSON('/api/user/check?email='+$('#email').val(), function (data){
+              if (data) {
+                  $('#error-message').html('Email đã tồn tại. Vui lòng chọn email khác.');
+                  $("#register").attr("disabled", true);
+              }
+              else {
+                  $('#error-message').html('');
+                  $("#register").attr("disabled", false);
+              }
+            })
+        });
+    </script>
+{{/extend}}  --}}
